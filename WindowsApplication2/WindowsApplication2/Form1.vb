@@ -97,7 +97,7 @@ Public Class Form1
         TextBox1.Text = sTest
 
         PictureBox1.Image = myImage
-        myImage.Save("e:\button.jpg", System.Drawing.Imaging.ImageFormat.Jpeg)
+        'myImage.Save("e:\button.jpg", System.Drawing.Imaging.ImageFormat.Jpeg)
 
     End Sub
 
@@ -306,126 +306,7 @@ Public Class Form1
         TextBox1.Text = sTest
     End Sub
 
-    Private Sub Button14_Click(sender As System.Object, e As System.EventArgs) Handles Button14.Click
-
-        Dim left As Integer = 400
-        '   Dim top As Integer = 100
-
-        Dim c As Color = Color.FromArgb(120, 120, 120, 120)
-
-        Dim p As Pen
-        Dim b As Brush
-
-        p = New Pen(Color.FromArgb(120, 120, 120, 120), 1)
-        Dim y As Integer
-        For i = 1 To 16
-            Dim top As Integer = 100
-            For j = 1 To 4
-                b = New SolidBrush(Color.FromArgb(255, 120, 120, 120))
-                Me.CreateGraphics.DrawRectangle(p, left, top, 10, 10)
-                Me.CreateGraphics.FillRectangle(b, left, top, 10, 10)
-                top += 20
-            Next j
-            left += 20
-        Next i
-    End Sub
-
-   
-    Private Sub Button15_Click(sender As System.Object, e As System.EventArgs) Handles Button15.Click
-        Dim ar1() As Integer = {20, 12}
-
-        Dim iLp As Integer
-        Dim sTest As String = ""
-
-        For iLp = 0 To ar1.GetUpperBound(0)
-            sTest &= ar1(iLp).ToString & ","
-        Next iLp
-
-        TextBox1.Text = sTest
-    End Sub
-
-    Private Sub Button16_Click(sender As System.Object, e As System.EventArgs) Handles Button16.Click
-
-        Dim temp() As Integer = {40, 20, 10, 15, 12, 23, 25, 45, 12, 35, 6, 65, 45, 12, 32, 12}
-        Dim clr() As Integer = {}
-        Dim a(16) As Integer
-        Dim r(16) As Integer
-        Dim g(16) As Integer
-        Dim b(16) As Integer
-
-        For u = 0 To 15
-            If temp(u) < 20 Then
-                a(u) = 120
-                r(u) = 120
-                g(u) = 120
-                b(u) = 120
-
-            ElseIf temp(u) >= 20 And temp(u) <= 30 Then
-                a(u) = 240
-                r(u) = 120
-                g(u) = 120
-                b(u) = 120
-
-            ElseIf temp(u) > 30 Then
-                a(u) = 360
-                r(u) = 120
-                g(u) = 120
-                b(u) = 120
-            Else
-            End If
-        Next u
-
-        Dim iLp As Integer
-        Dim sTest As String = ""
-
-        For iLp = 0 To a.GetUpperBound(0) - 1
-            sTest &= a(iLp).ToString & ","
-        Next iLp
-
-        TextBox1.Text = sTest
-
-
-
+    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.TextChanged
 
     End Sub
-
-    Private Sub Button17_Click(sender As System.Object, e As System.EventArgs) Handles Button17.Click
-        Dim str1 As String = "21" + "." + "23"
-        Dim float1 = str1
-        MessageBox.Show(float1 + 1)
-    End Sub
-
-    Private Sub Button18_Click(sender As System.Object, e As System.EventArgs) Handles Button18.Click
-       
-        Button18_Paint()
-
-    End Sub
-
-    Private Sub Button18_Paint(sender As Object, e As System.Windows.Forms.PaintEventArgs) Handles Button18.Paint
-
-    End Sub
-
-    Private Sub Button18_Paint()
-        Dim left As Integer = 400
-        '   Dim top As Integer = 100
-
-        Dim c As Color = Color.FromArgb(120, 120, 120, 120)
-
-        Dim p As Pen
-        Dim b As Brush
-
-        p = New Pen(Color.FromArgb(120, 120, 120, 120), 1)
-        Dim y As Integer
-        For i = 1 To 16
-            Dim top As Integer = 100
-            For j = 1 To 4
-                b = New SolidBrush(Color.FromArgb(255, 120, 120, 120))
-                Me.CreateGraphics.DrawRectangle(p, left, top, 10, 10)
-                Me.CreateGraphics.FillRectangle(b, left, top, 10, 10)
-                top += 20
-            Next j
-            left += 20
-        Next i
-    End Sub
-
 End Class
